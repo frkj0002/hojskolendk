@@ -1,5 +1,49 @@
 ---
+import { Image } from "astro:assets";
+import logo from "../assets/images/logo.svg";
 ---
-<div>
-Header - tilføj navigation mm.
-</div>
+<header x-data="{ showmenu: false }" class="px-4 static top-0 lg:static w-full z-50">
+    <div id="navbar" class="flex flex-row items-center justify-between md:px-4 md:py-2">
+
+       <!-- Logo -->
+        <div>
+        <a href="/"><Image src={logo} alt="logo" class="w-25" /></a>
+        </div>
+
+        <!-- Desktop Menu -->
+    <nav id="desktopmenu" class="hidden lg:flex flex-1 justify-end">
+      <ul class="flex flex-row gap-14">
+        <li>OPHOLD</li>
+        <li>INFOMØDER</li>
+        <li>OM OS</li>
+        <!-- Registrer knap desktop -->
+         <div class="hidden lg:flex items-center">
+        <a href="#">TILMELD</a>
+        </div>
+        </ul>
+    </nav>
+   
+
+     <!-- Hamburger Menu Button -->
+    <button id="burgermenu" class="lg:hidden" x-on:click="showmenu = !showmenu">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-8 text-[#1DBF62]">
+        <path fill-rule="evenodd" d="M3 6.75A.75.75 0 0 1 3.75 6h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 6.75ZM3 12a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 12Zm0 5.25a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75Z" clip-rule="evenodd"></path>
+      </svg>
+    </button>
+  </div>
+
+  <!-- Mobile Menu -->
+  <nav id="mobilmenu" class="lg:hidden sticky top-18 left-0 w-full pb-20 bg-[#182D40] drop-shadow-lg text-[#F2F4FF] flex flex-col pt-4" x-show="showmenu" x-transition x-on:click="showmenu = false" x-on:click.outside="showmenu = false">
+    <ul class="flex flex-col items-center gap-4">
+      <li>OPHOLD</li>
+      <li>INFOMØDER</li>
+      <li>OM OS</li>
+      <!-- Register Button in Mobile Menu -->
+      <li class="mt-4">
+        <a href="/registrer">Registrer</a>
+      </li>
+    </ul>
+  </nav>
+    
+
+
