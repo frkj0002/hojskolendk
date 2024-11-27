@@ -1,4 +1,5 @@
 ---
+import Button from "../components/Button.astro";
 import { Image } from "astro:assets";
 import logo from "../assets/images/logo.svg";
 ---
@@ -12,13 +13,13 @@ import logo from "../assets/images/logo.svg";
 
     <!-- Desktop Menu -->
     <nav id="desktopmenu" class="hidden lg:flex flex-1 justify-end">
-      <ul class="flex flex-row gap-14">
+      <ul class="flex flex-row gap-lg text-header3mobile items-center">
         <li>OPHOLD</li>
         <li>INFOMØDER</li>
         <li>OM OS</li>
         <!-- Registrer knap desktop -->
         <div class="hidden lg:flex items-center">
-          <a href="#">TILMELD</a>
+          <a href="#"><Button variant="primary" , size="small" class="">Tilmeld</Button></a>
         </div>
       </ul>
     </nav>

@@ -6,8 +6,10 @@ import { Image } from "astro:assets";
 import Anmeldelse from "../components/Anmeldelse.astro";
 import Karrusel from "../components/Karrusel.astro";
 import polarid_sektion1_web from "../assets/images/polarid_sektion1_web.png";
+import polarid_sektion2_web from "../assets/images/polarid_sektion2_web.png";
+import polarid_sektion1_mobil from "../assets/images/polarid_sektion1_mobil.png";
+import polarid_sektion2_mobil from "../assets/images/polarid_sektion2_mobil.png";
 import surfholdet from "../assets/images/surfholdet.png";
-import polarid_sektion2_web from "../assets/images/polarid_sektion_2.png";
 ---
 
 <MainLayout title="höjskolendk">
@@ -33,7 +35,8 @@ import polarid_sektion2_web from "../assets/images/polarid_sektion_2.png";
   <section class="flex flex-col items-center px-lg">
     <h2>Højskoleophold i udlandet</h2>
     <p class="w-[826px] py-sm">Tag på højskole i udlandet med HÖJSKOLENDK og oplev en unik rejse, der kombinerer fællesskab, dannelse og eventyr. Brug dit sabbatår på frivilligt arbejde, vilde naturoplevelser, sprogindlæring og personlig udvikling, der styrker din selvtillid og selvindsigt. Inspirerende undervisning forener læring og leg og hjælper dig med at udforske dine drømme og mål for fremtiden. Vores elever beskriver opholdet som "eventyrlige dannelsesrejser med noget på hjerte." Med passionerede danske undervisere, trygge rammer og en stærk gruppe oplever du vilde kulturer, adventure og en rejse, der gør dig stærkere som menneske. Find dit livs eventyr med HÖJSKOLENDK - vi glæder os til at byde dig velkommen!</p>
-    <Image src={polarid_sektion1_web} alt="logo" class="w-full" />
+    <Image src={polarid_sektion1_web} alt="logo" class="hidden md:block w-full" />
+    <Image src={polarid_sektion1_mobil} alt="logo" class="md:hidden" />
   </section>
 
   <!-- Anmeldelser sektion -->
@@ -60,7 +63,7 @@ import polarid_sektion2_web from "../assets/images/polarid_sektion_2.png";
   </section>
 
   <!-- Vælg dit eventyr -->
-  <section class="grid grid-cols-2">
+  <section class="md:grid grid-cols-2">
     <article class="mx-auto">
       <Image src={surfholdet} alt="logo" class="w-[510px]" />
     </article>
@@ -74,13 +77,14 @@ import polarid_sektion2_web from "../assets/images/polarid_sektion_2.png";
   <!-- En ny rejsehøjskole fyldt med oplevelser -->
   <section class="flex flex-col items-center py-lg">
     <h3 class="py-m">En ny rejsehøjskole fyldt med oplevelser</h3>
-    <p class="w-[826px]">Vil du gerne på højskole i udlandet, tilbyder vi de mest attraktive højskoleophold i udlandet, hvor du besøger flere skønne og spændende lande og deltage i spændende og inspirerende undervisning og alverdens fede aktiviteter. Din højskolerejse kan blandt andet indeholde:</p>
+    <p class="md:w-[826px]">Vil du gerne på højskole i udlandet, tilbyder vi de mest attraktive højskoleophold i udlandet, hvor du besøger flere skønne og spændende lande og deltage i spændende og inspirerende undervisning og alverdens fede aktiviteter. Din højskolerejse kan blandt andet indeholde:</p>
   </section>
 
   <!-- Accordions -->
 
   <!-- Billed sektion -->
   <section class="flex flex-col items-center">
-    <Image src={polarid_sektion2_web} alt="logo" class="w-[1296px]" />
+    <Image src={polarid_sektion2_web} alt="logo" class="hidden md:block w-[1296px]" />
+    <Image src={polarid_sektion2_mobil} alt="logo" class="md:hidden" />
   </section>
 </MainLayout>
