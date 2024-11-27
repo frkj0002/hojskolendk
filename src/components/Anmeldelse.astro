@@ -1,10 +1,10 @@
 ---
-// const {citat="", elevimage="", elevimagealt="", elevnavn=""}=Astro.props;
+const {citat="", elevimage="", elevimagealt="", elevnavn=""}=Astro.props;
 ---
 <article class="bg-colors-orange-50 rounded-small ">
     <section class="bg-colors-orange-500 rounded-t-small p-s">
-        <!-- <p>{citat}</p> -->
-         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum dolor, distinctio fuga, suscipit quia sapiente, non odio aperiam quibusdam provident ex neque officiis nihil molestiae aut deleniti iure consequuntur. Odit.</p>
+        <p>{citat}</p>
+         <!-- <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum dolor, distinctio fuga, suscipit quia sapiente, non odio aperiam quibusdam provident ex neque officiis nihil molestiae aut deleniti iure consequuntur. Odit.</p> -->
     </section>
     <div class="flex place-content-center">
         <svg xmlns="http://www.w3.org/2000/svg" width="27" height="18" viewBox="0 0 27 18" fill="none">
@@ -12,11 +12,11 @@
         </svg>
     </div>
     <section class="grid justify-center gap-sm py-s">
-        <!-- <img src={elevimage} alt={elevimagealt} class="object-cover rounded-full"> -->
-        <img src="/emma2.png" alt="emma" class="object-cover rounded-full w-5xl h-5xl">
+        <img src={elevimage} alt={elevimagealt} class="object-cover rounded-full w-5xl h-5xl">
+        <!-- <img src="/emma2.png" alt="emma" class="object-cover rounded-full w-5xl h-5xl"> -->
         <div class="text-center">
-            <!-- <p>{elevnavn}</p> -->
-             <p class="font-bold">Emma</p>
+            <p class="font-bold">{elevnavn}</p>
+             <!-- <p class="font-bold">Emma</p> -->
              <p>Elev i F24</p>
         </div>
     </section>
