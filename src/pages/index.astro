@@ -7,11 +7,18 @@ import thumbsup from "../assets/images/thumbsup.png";
 import Anmeldelse from "../components/Anmeldelse.astro";
 ---
 
-<MainLayout title="Titel">
-  <article>
-    <h1>HÖJSKOLENDK</h1>
+<MainLayout title="höjskolendk">
+  <article class="relative h-screen">
+    <div class="absolute inset-0 flex justify-center items-center z-50">
+      <h1 class="">HÖJSKOLENDK</h1>
+    </div>
+    <div class="flex flex-row justify-center items-center h-full z-0">
+      <video src="public/hojskolendk_hero.mp4" class="rounded-lg shadow-lg w-full max-w-lg" autoplay muted loop></video>
+      <video src="public/hojskolendk_hero.mp4" class="rounded-lg shadow-lg w-full max-w-lg" autoplay muted loop></video>
+      <video src="public/hojskolendk_hero.mp4" class="rounded-lg shadow-lg w-full max-w-lg" autoplay muted loop></video>
+    </div>
   </article>
   <section>
-    <Anmeldelse></Anmeldelse>
+    <Anmeldelse />
   </section>
 </MainLayout>
