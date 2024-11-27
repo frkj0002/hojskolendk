@@ -8,22 +8,26 @@
     @apply text-header1;
     @apply font-regular;
     @apply text-colors-orange-500;
+    @apply uppercase;
   }
   h2 {
     @apply font-display;
     @apply text-header2;
     @apply font-regular;
     @apply text-colors-orange-500;
+    @apply uppercase;
   }
   h3 {
     @apply font-sans;
     @apply text-header3;
     @apply font-medium;
+    @apply uppercase;
   }
   h4 {
     @apply font-sans;
     @apply text-header4;
     @apply font-medium;
+    @apply uppercase;
   }
   p {
     @apply font-sans;

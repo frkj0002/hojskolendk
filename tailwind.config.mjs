@@ -72,7 +72,7 @@ export default {
     /* Tilføj fonte herunder - husk også at tilføje webfonte i head-sektionen i MainLayout  */
     fontFamily: {
       sans: ["Afacad", "sans-serif"],
-      display: ["Bagel Fat One", "system - ui"],
+      display: ["Bagel Fat One"],
     },
 
     /* Tilføj dit typografiske hierarki herunder */
