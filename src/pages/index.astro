@@ -3,8 +3,10 @@ import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
 import Link from "../components/Link.astro";
 import { Image } from "astro:assets";
-import thumbsup from "../assets/images/thumbsup.png";
 import Anmeldelse from "../components/Anmeldelse.astro";
+import polarid_sektion1_web from "../assets/images/polarid_sektion1_web.png";
+import surfholdet from "../assets/images/surfholdet.png";
+import polarid_sektion2_web from "../assets/images/polarid_sektion_2.png";
 ---
 
 <MainLayout title="höjskolendk">
@@ -18,7 +20,65 @@ import Anmeldelse from "../components/Anmeldelse.astro";
       <video src="public/hojskolendk_hero.mp4" class="rounded-lg shadow-lg w-full max-w-lg" autoplay muted loop></video>
     </div>
   </article>
+
+  <!-- Dit livs eventyr -->
+  <section class="pt-4xl flex flex-col items-center">
+    <h2>Dit livs eventyr</h2>
+    <p class="w-[826px] py-sm">HÖJSKOLENDK er en dansk højskole for unge i alderen ca. 18-30 år. Vi brænder for oplevelser, fællesskab og mødet med nye mennesker og kulturer; derfor laver vi eventyrlige højskoleophold i udlandet. HÖJSKOLENDK er noget for dig, hvis du vil på højskole i udlandet og er vild med højskolefællesskab, vil med på et fantastisk rejseeventyr, glæder dig til at lære om fremmede kulturer, vil rejse med rygsæk, drømmer om en fed grupperejse med andre skønne unge, vil opleve et stærkt sammenhold og ønsker inspirerende og meningsfuld undervisning. Du er sikker på en tryg rejseoplevelse da vi er medlem af Rejsegarantifonden. Vi glæder os til at lære dig at kende!</p>
+  </section>
+
+  <!-- Cards sektion -->
+  <!-- Højskoleophold i udlandet -->
+  <section class="flex flex-col items-center px-lg">
+    <h2>Højskoleophold i udlandet</h2>
+    <p class="w-[826px] py-sm">Tag på højskole i udlandet med HÖJSKOLENDK og oplev en unik rejse, der kombinerer fællesskab, dannelse og eventyr. Brug dit sabbatår på frivilligt arbejde, vilde naturoplevelser, sprogindlæring og personlig udvikling, der styrker din selvtillid og selvindsigt. Inspirerende undervisning forener læring og leg og hjælper dig med at udforske dine drømme og mål for fremtiden. Vores elever beskriver opholdet som "eventyrlige dannelsesrejser med noget på hjerte." Med passionerede danske undervisere, trygge rammer og en stærk gruppe oplever du vilde kulturer, adventure og en rejse, der gør dig stærkere som menneske. Find dit livs eventyr med HÖJSKOLENDK - vi glæder os til at byde dig velkommen!</p>
+    <Image src={polarid_sektion1_web} alt="logo" class="w-full" />
+  </section>
+
+  <!-- Anmeldelser sektion -->
   <section>
     <Anmeldelse />
+  </section>
+
+  <!-- Infomøde sektion -->
+  <section class="py-lg">
+    <h2 class="flex flex-col items-center">Infomøder</h2>
+    <article>
+      <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+      <h4>Vi glæder os til at se dig!</h4>
+    </article>
+    <article>
+      <!-- forms felter -->
+      <!-- knap -->
+    </article>
+  </section>
+
+  <!-- Vælg dit eventyr -->
+  <section class="grid grid-cols-2">
+    <article class="mx-auto">
+      <Image src={surfholdet} alt="logo" class="w-[510px]" />
+    </article>
+    <article class="my-auto">
+      <h2>Vælg dit eventyr</h2>
+      <p class="w-[674px]">Hvis du er afklaret og klar på højskoleeventyr, er det bare med at tilmelde dig. Der bliver nemlig udsolgt på langt de fleste af vores ophold.</p>
+      <Button>Tilmeld ophold</Button>
+    </article>
+  </section>
+
+  <!-- En ny rejsehøjskole fyldt med oplevelser -->
+  <section class="flex flex-col items-center py-lg">
+    <h3 class="py-m">En ny rejsehøjskole fyldt med oplevelser</h3>
+    <p class="w-[826px]">Vil du gerne på højskole i udlandet, tilbyder vi de mest attraktive højskoleophold i udlandet, hvor du besøger flere skønne og spændende lande og deltage i spændende og inspirerende undervisning og alverdens fede aktiviteter. Din højskolerejse kan blandt andet indeholde:</p>
+  </section>
+
+  <!-- Accordions -->
+
+  <!-- Billed sektion -->
+  <section class="flex flex-col items-center">
+    <Image src={polarid_sektion2_web} alt="logo" class="w-[1296px]" />
   </section>
 </MainLayout>
