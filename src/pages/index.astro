@@ -2,6 +2,7 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
 import Link from "../components/Link.astro";
+import Card from "../components/Card.astro";
 import { Image } from "astro:assets";
 import Anmeldelse from "../components/Anmeldelse.astro";
 import Karrusel from "../components/Karrusel.astro";
@@ -31,6 +32,12 @@ import surfholdet from "../assets/images/surfholdet.png";
   </section>
 
   <!-- Cards sektion -->
+  <section class="grid md:grid-cols-3 gap-m mx-lg">
+    <Card cardimage="public/IMG_8086.jpg" varighed=" 3 måneder" destination="Caribien, Hawaii & Mexico" afrejse=" 20. oktober 2024" pris=" 67.900 kr." />
+    <Card cardimage="public/IMG_8087.jpg" varighed=" 3 måneder" destination="Australien, NZ, Bali, Gili Islands" afrejse=" 9. januar 2025" pris=" 58.900 kr." />
+    <Card cardimage="public/IMG_8088.jpg" varighed=" 3 måneder" destination="Costa Rica, Mexico & Columbia" afrejse=" 9. januar 2025" pris=" 58.900 kr." />
+  </section>
+
   <!-- Højskoleophold i udlandet -->
   <section class="flex flex-col items-center px-lg">
     <h2>Højskoleophold i udlandet</h2>
@@ -41,8 +48,8 @@ import surfholdet from "../assets/images/surfholdet.png";
 
   <!-- Anmeldelser sektion -->
   <section>
-    <Karrusel></Karrusel>
-    <Anmeldelse />
+    <Karrusel />
+    <!-- <Anmeldelse /> -->
   </section>
 
   <!-- Infomøde sektion -->

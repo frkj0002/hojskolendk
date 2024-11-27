@@ -1,0 +1,23 @@
+---
+const { url = "#", cardimage = "", cardimagealt = "", destination = "", varighed = "", afrejse = "", pris = "" } = Astro.props;
+import Link from "./Link.astro";
+import Button from "./Button.astro";
+---
+
+<article class="bg-colors-beige-550 @container shadow-drop6 rounded-small">
+  <a href="#" class="flex flex-col justify-between">
+    <section>
+      <img src={cardimage} alt={cardimagealt} class="object-cover h-7xl w-full rounded-t-small" />
+    </section>
+    <section class="py-sm px-s">
+      <h4>{destination}</h4>
+      <p><span>Varighed:</span><span>{varighed}</span></p>
+      <p><span>Næste rejse:</span><span>{afrejse}</span></p>
+      <p><span>Pris:</span><span>{pris}</span></p>
+      <Link>LÆS MERE OM OPHOLDET</Link>
+      <div class="flex justify-center pt-s">
+        <Button variant="secondary" size="large">TILMELD INFOMØDE</Button>
+      </div>
+    </section>
+  </a>
+</article>
