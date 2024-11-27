@@ -1,3 +1,73 @@
 ---
+import Anmeldelse from './Anmeldelse.astro';
 
+// Liste over data til hver slide
+const slidesData = [
+    {
+        citat: 'På mit højskoleophold blev jeg mødt af uforglemmelige oplevelser, spændende undervisning og nye venskaber.', 
+        elevimage: 'public/emma2.png',
+        elevimagealt: 'billede af Emma',
+        elevnavn: 'Emma'
+    },
+    {
+        citat: 'De mest imødekommende og omsorgsfulde lære / undervisere / rejseledere, man kunne ønske sig.',
+        elevimage: 'public/emma2.png',
+        elevimagealt: 'billede af Emma',
+        elevnavn: 'Emma'
+    },
+    {
+        citat: 'På mit højskoleophold blev jeg mødt af uforglemmelige oplevelser, spændende undervisning og nye venskaber.', 
+        elevimage: 'public/emma2.png',
+        elevimagealt: 'billede af Emma',
+        elevnavn: 'Emma'
+    },
+    {
+        citat: 'På mit højskoleophold blev jeg mødt af uforglemmelige oplevelser, spændende undervisning og nye venskaber.', 
+        elevimage: 'public/emma2.png',
+        elevimagealt: 'billede af Emma',
+        elevnavn: 'Emma'
+    },
+    {
+        citat: 'På mit højskoleophold blev jeg mødt af uforglemmelige oplevelser, spændende undervisning og nye venskaber.', 
+        elevimage: 'public/emma2.png',
+        elevimagealt: 'billede af Emma',
+        elevnavn: 'Emma'
+    }
+];
 ---
+<div 
+    x-data="{ 
+        activeIndex: 0, 
+        slides: {slidesData.length} 
+    }" 
+    class="relative w-full max-w-4xl mx-auto">
+
+    <!-- Slide-container -->
+    <div class="overflow-hidden relative">
+        <!-- Flex-container -->
+        <div 
+            class="flex transition-transform duration-500 ease-out"
+            :style="{ transform: `translateX(-${activeIndex * 100}%)` }">
+            <!-- Mapper slidesData og sender data til DynamicSlide -->
+            {slidesData.map((slide, index) => (
+                <div class="flex-none w-full">
+                    <Anmeldelse key={index} {...slide} />
+                </div>
+            ))}
+        </div>
+    </div>
+
+    <!-- Navigation knapper -->
+     <div class="">
+    <button 
+        @click="activeIndex = (activeIndex - 1 + slides) % slides"
+        class="absolute left-4 top-1/2 -translate-y-1/2 bg-gray-800 text-white px-4 py-2 rounded-full">
+        ←
+    </button>
+    <button 
+        @click="activeIndex = (activeIndex + 1) % slides"
+        class="absolute right-4 top-1/2 -translate-y-1/2 bg-gray-800 text-white px-4 py-2 rounded-full">
+        →
+    </button>
+    </div>
+</div>
