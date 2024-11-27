@@ -2,6 +2,33 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base{
-
+@layer base {
+  h1 {
+    @apply font-display;
+    @apply text-header1;
+    @apply font-regular;
+    @apply text-colors-orange-500;
+  }
+  h2 {
+    @apply font-display;
+    @apply text-header2;
+    @apply font-regular;
+    @apply text-colors-orange-500;
+  }
+  h3 {
+    @apply font-sans;
+    @apply text-header3;
+    @apply font-medium;
+  }
+  h4 {
+    @apply font-sans;
+    @apply text-header4;
+    @apply font-medium;
+  }
+  p {
+    @apply font-sans;
+    @apply text-paragraph;
+    @apply font-regular;
+    @apply text-colors-blue-950;
+  }
 }
