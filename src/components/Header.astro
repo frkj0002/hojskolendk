@@ -2,8 +2,11 @@
 import { Image } from "astro:assets";
 import logo from "../assets/images/logo.svg";
 ---
-<header x-data="{ showmenu: false }" class="px-4 static top-0 lg:static w-full z-50">
-    <div id="navbar" class="flex flex-row items-center justify-between md:px-4 md:py-2">
+<header x-data="{ scrolled: false }" 
+    x-init="window.addEventListener('scroll', () => { scrolled = window.scrollY > 500 })" 
+    :class="scrolled ? 'bg-colors-beige-500' : 'bg-transparent'" 
+    class="fixed top-0 w-full z-50 transition-colors duration-300">
+    <div id="navbar" class="flex flex-row items-center justify-between md:px-s md:py-s">
 
        <!-- Logo -->
         <div>
