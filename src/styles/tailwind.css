@@ -5,34 +5,42 @@
 @layer base {
   h1 {
     @apply font-display;
-    @apply text-header1;
+    /* @apply text-header1; */
+    font-size: clamp(2.5rem, 7vw, 6.26rem);
     @apply font-regular;
     @apply text-colors-orange-500;
     @apply uppercase;
   }
   h2 {
     @apply font-display;
-    @apply text-header2;
+    /* @apply text-header2; */
+    font-size: clamp(1.5625rem, 7vw, 2.8125rem);
     @apply font-regular;
     @apply text-colors-orange-500;
     @apply uppercase;
   }
   h3 {
     @apply font-sans;
-    @apply text-header3;
+    /* @apply text-header3; */
+    font-size: clamp(1.25rem, 3vw, 1.875rem);
     @apply font-medium;
     @apply uppercase;
   }
   h4 {
     @apply font-sans;
-    @apply text-header4;
+    /* @apply text-header4; */
+    font-size: clamp(1.0625rem, 3vw, 1.625rem);
     @apply font-medium;
     @apply uppercase;
   }
   p {
     @apply font-sans;
-    @apply text-paragraph;
+    /* @apply text-paragraph; */
+    font-size: clamp(1rem, 3vw, 1.5625rem);
     @apply font-regular;
     @apply text-colors-blue-950;
+  }
+
+  @screen md {
   }
 }

@@ -77,6 +77,12 @@ export default {
 
     /* Tilføj dit typografiske hierarki herunder */
     fontSize: {
+      paragraphmobile: ["1rem", { lineHeight: "1.875rem" }],
+      header4mobile: ["1.0625rem", { lineHeight: "normal" }],
+      header3mobile: ["1.25rem", { lineHeight: "normal" }],
+      header2mobile: ["1.5625rem", { lineHeight: "normal" }],
+      header1mobile: ["2.5rem", { lineHeight: "normal" }],
+
       header1: ["6.26rem", { lineHeight: "normal" }],
       header2: ["2.8125rem", { lineHeight: "normal" }],
       header3: ["1.875rem", { lineHeight: "normal" }],
@@ -88,6 +94,7 @@ export default {
     fontWeight: {
       regular: "400",
       medium: "500",
+      bold: "700",
     },
 
     /* Borders - borderstørrelser herunder */
@@ -102,6 +109,7 @@ export default {
       none: "0px",
       small: "1.25rem",
       large: "4.38rem",
+      full: "10.875rem",
     },
 
     /* Box shadows herunder */
