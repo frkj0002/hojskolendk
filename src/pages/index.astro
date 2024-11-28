@@ -13,6 +13,7 @@ import polarid_sektion2_mobil from "../assets/images/polarid_sektion2_mobil.png"
 import surfholdet from "../assets/images/surfholdet.png";
 import Accordion from "../components/Accordion.astro";
 import Form from "../components/Form.astro";
+import pin from "../assets/images/pin.svg";
 ---
 
 <MainLayout title="höjskolendk">
@@ -71,30 +72,49 @@ import Form from "../components/Form.astro";
   </section>
 
   <!-- Infomøde sektion -->
-  <h2 class="flex flex-col items-center">Infomøder</h2>
-  <section class="px-lg grid grid-cols-2">
-    <article class="">
-      <p>
+  <h2 class="flex flex-col items-center pb-ml">Infomøder</h2>
+  <section class="px-lg md:grid grid-cols-2 gap-m md:pb-6xl">
+    <article class="md:w-[663px]">
+      <p class="leading-[2.5rem]">
         Mangler du det sidste skub til at tage på et af vores højskoleophold, så tilmeld dig et af vores hyggelige infomøder. Her får du svar på alle dine spørgsmål, og du har mulighed for at snakke med tidligere elever og rejseledere i vores 'Rejsefeber Café'.
         <br />Vi fortæller blandt andet om:
       </p>
-      <ul class="list-disc px-m">
+      <ul class="list-disc md:px-m pt-m leading-[2.5rem]">
         <li>Hvem er vi?</li>
         <li>Alle de fede oplevelser der venter</li>
         <li>En ”almindelig” dag på højskole i udlandet</li>
         <li>Den levende og aktive måde vi underviser på (glem kedelige klasseværelser)</li>
         <li>Økonomi, lommepenge, pakkeliste, friuger, afrejsemødet, etc.</li>
       </ul>
+      <section class="flex flex-col md:flex-row md:gap-2xl pb-lg pt-m">
+        <ul class="pt-m leading-[2.5rem]">
+          <li class="flex"><Image src={pin} alt="logo" class="md:block w-[24px]" /><h4>København</h4></li>
+          <li>Studenterhuset</li>
+          <li>Købmagergade 52</li>
+          <li>1150 København K</li>
+        </ul>
+        <ul class="pt-m leading-[2.5rem]">
+          <li class="flex"><Image src={pin} alt="logo" class="md:block w-[24px]" /><h4>Aarhus</h4></li>
+          <li>LYNfabrikken</li>
+          <li>Vestergade 49B</li>
+          <li>8000 Aarhus</li>
+        </ul>
+        <ul class="pt-m leading-[2.5rem]">
+          <li class="flex"><Image src={pin} alt="logo" class="md:block w-[24px]" /><h4>Online</h4></li>
+          <li>Bor du langt fra</li>
+          <li>storbyerne, kan du</li>
+          <li>deltage online</li>
+        </ul>
+      </section>
       <h4>Vi glæder os til at se dig!</h4>
     </article>
     <article>
-      <!-- forms felter -->
-      <!-- knap -->
+      <Form />
     </article>
   </section>
 
   <!-- Vælg dit eventyr -->
-  <section class="md:grid grid-cols-2">
+  <section class="md:grid grid-cols-2 md:pb-3xl">
     <article class="mx-auto">
       <Image src={surfholdet} alt="logo" class="w-[510px]" />
     </article>
@@ -112,10 +132,18 @@ import Form from "../components/Form.astro";
   </section>
 
   <!-- Accordions -->
-  <Accordion />
+  <section class="md:grid grid-cols-2 md:px-lg gap-sm">
+    <Accordion summary="Teambuilding" content="Hvorfor tage på et kedeligt kursus i Danmark, når du kan rejse ud i verden og udvikle dig samtidig? Du rejser sammen med andre unge voksne og lærer en masse om samarbejde, relationer, fællesskab, konflikter, styrker og stærke teams. Du får ikke blot rejse-erfaring på cv'et, men også et væld af brugbare redskaber til studie eller karriere. " />
+    <Accordion summary="Frivilligt arbejde & Kulturforståelse" content="Drømmer du om at lave frivilligt arbejde og gøre en forskel i et andet land? Mange af vores højskole rejser inkluderer frivilligt arbejde, hvor vi kommer helt tæt på de lokale. Det giver dig en unik indsigt i landet, større forståelse for kulturen og måden man lever på i de forskellige lande." />
+    <Accordion summary="Friuger - et væld af muligheder" content="Efter spændende og lærerige undervisningsforløb, har vi – alt efter hvilken højskole rejse du vælger – lagt én eller flere friuger ind. Her har I mulighed for selv at tage styringen og udforske dét land, kontinent eller ø-rige vi befinder os i. Friugerne bliver brugt på forskellig vis og oftest deler holdet sig op i lidt mindre grupper for at tage på eventyr – andre gange rejser hele holdet sammen på en fed friuge " />
+    <Accordion summary="Spændende kulturoplevelser" content="Kulturen er vigtig at opleve, når man befinder sig i et nyt land. Det giver dig både nogle rigtigt spændende oplevelser og menneske-møder, men også en unik indsigt, du ikke kan læse dig til i en bog eller se i et rejseprogram. På vores højskole ture kan du opleve alt fra ældgamle Hindu-templer i Indien, surf-kulturen på Hawaii, Mayaindianerne i Guatemala, de gamle inkaruiner i Mexico, buddhisme i Thailand, te-plantager i Sri Lanka og kakao- farme i Costa Rica." />
+  </section>
+  <section class="flex flex-col items-center pt-sm md:pb-3xl">
+    <Accordion summary="vilde naturoplevelser" content="Ingen rejse ud i verden uden eventyrlige og vilde naturoplevelser. Mange af de destinationer, hvor vi tager på højskoleophold, byder på enestående og overdådig natur. Det kan være alt fra snorkleture i Caribien, river rafting i Thailand, spotte brøleaber i Costa Ricas regnskove, gå på opdagelse i Inka-ruinerne i Mexico, trekke i Himalayas bjerge i Nepal, sejle kajak i marine nationalparker, dykke med manta rays på Hawaii, vandre i New Zealands fabelagtige nationalparker eller tage på safari i Sri Lanka og se leoparder, elefanter og bjørne. Alle vores rejser er fyldt med storslåede oplevelser, som du aldrig vil glemme." />
+  </section>
 
   <!-- Billed sektion -->
-  <section class="flex flex-col items-center pb-lg">
+  <section class="flex flex-col items-center pb-lg md:pb-6xl">
     <Image src={polarid_sektion2_web} alt="logo" class="hidden md:block w-[1296px]" />
     <Image src={polarid_sektion2_mobil} alt="logo" class="md:hidden" />
   </section>

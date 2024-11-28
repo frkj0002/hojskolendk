@@ -121,6 +121,7 @@ export default {
     },
 
     extend: {
+      
       /* Tilføj din egen farvepalette nedenfor */
       // colors: {
       //     transparent: 'transparent',
