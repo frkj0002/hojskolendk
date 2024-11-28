@@ -1,0 +1,17 @@
+---
+const {summary="", content=""} = Astro.props;
+import Button from "./Button.astro";
+---
+<!-- Klassen group gør det muligt at style child-elementerne baseret på, om details er åbent eller lukket -->
+<details class="group bg-colors-orange-400 text-colors-orange-900 rounded-small shadow-drop4 p-m w-full md:max-w-3xl">
+    <summary class="flex justify-between items-center cursor-pointer">
+        <h4>{summary}</h4>
+        <svg class="transform transition-transform group-open:-rotate-180" xmlns="http://www.w3.org/2000/svg" width="37" height="21" viewBox="0 0 37 21" fill="none">
+            <path d="M32.4889 1.96149C33.3143 1.15036 34.6376 1.15067 35.4626 1.96219C36.3075 2.79329 36.3073 4.15552 35.4621 4.98637L20.5197 19.6759C20.2557 19.9371 19.9416 20.1443 19.5958 20.2858C19.2499 20.4272 18.8789 20.5 18.5043 20.5C18.1296 20.5 17.7587 20.4272 17.4128 20.2858C17.0669 20.1443 16.7529 19.9371 16.4888 19.6759L1.53854 4.98623C0.693215 4.15564 0.693159 2.79331 1.53841 1.96265C2.363 1.1523 3.68487 1.15224 4.50953 1.96252L18.5 15.709L32.4889 1.96149Z" fill="#3D1500"/>
+        </svg>
+    </summary>
+    <div class="py-m">
+        <p>{content}</p>
+    </div>
+</details>
+
