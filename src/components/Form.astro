@@ -1,0 +1,32 @@
+---
+import Button from "./Button.astro";
+---
+
+<form class="flex flex-col  gap-s text-paragraphmobile md:text-paragraph rounded-small">
+    <select name="infomøde" id="infomoede" required class="bg-colors-beige-550 placeholder-colors-blue-900 rounded-small border-none shadow-inner6 py-xs pl-xs ">
+        <option value="" selected disabled >Vælg infomøde*</option>
+        <option value="aarhus">Aarhus - 14. januar 2025, kl. 17.00-19.00</option>
+        <option value="kobenhavn">København - 16. januar 2025, kl. 17.00-19.00</option>
+        <option value="online">Online - 21. januar 2025, kl. 17.00-19.00</option>
+    </select>
+    <select name="destination" id="destination" required class="bg-colors-beige-550 placeholder-colors-blue-900 rounded-small border-none shadow-inner6 py-xs pl-xs">
+        <option value="" selected disabled >Vælg destination*</option>
+        <option value="caribien, hawaii og mexico">Caribien, Hawaii & Mexico</option>
+        <option value="australien, nz, bali og gili islands">Australien, NZ, Bali & Gili Islands</option>
+        <option value="costa rica, mexico og colombia">Costa Rica, Mexico & Colombia</option>
+    </select>
+    <input type="text" id="fname" name="fname" placeholder="Dit fulde navn*" class="bg-colors-beige-550 rounded-small border-none shadow-inner6 py-xs pl-xs placeholder-colors-blue-900">
+    <input type="text" id="phone" name="phone" placeholder="Telefon nr." class="bg-colors-beige-550 rounded-small border-none shadow-inner6 py-xs pl-xs placeholder-colors-blue-900">
+    <input type="email" id="email" name="email" placeholder="E-mail" class="bg-colors-beige-550 rounded-small border-none shadow-inner6 py-xs pl-xs placeholder-colors-blue-900">
+    <input type="text" id="deltagere" name="deltagere" placeholder="Hvor mange deltagere kommer I?*" class="bg-colors-beige-550 rounded-small border-none shadow-inner6 py-xs pl-xs placeholder-colors-blue-900">
+    <p>*Disse felter skal udfyldes</p>
+    <div class="flex items-center gap-xxs">
+    <input type="radio" id="kontakt" name="kontakt" value="kontakt" class="border-none bg-colors-beige-550 shadow-inner6">
+    <label for="kontakt">Ved tilmelding giver du os tilladelse til at kontakte dig m. påmindelser og opfølgning</label>
+    </div>
+    <div class="flex items-center gap-xxs">
+    <input type="radio" id="privatlivspolitik" name="privatlivspolitik" value="privatlivspolitik" class="border-none bg-colors-beige-550 shadow-inner6">
+    <label for="privatlivspolitik">Jeg har læst jeres privatlivspolitik og generelle bestemmelser og er indforstået med begge*</label>
+    </div>
+    <Button variant="primary" size="small" class="w-full">TILMELD INFOMØDE</Button>
+</form>

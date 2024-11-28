@@ -87,7 +87,7 @@ export default {
       header2: ["2.8125rem", { lineHeight: "normal" }],
       header3: ["1.875rem", { lineHeight: "normal" }],
       header4: ["1.625rem", { lineHeight: "normal" }],
-      paragraph: ["1.5625rem", { lineHeight: "2.70625rem" }],
+      paragraph: ["1.3125rem", { lineHeight: "2.70625rem" }],
     },
 
     /* Tilføj dit fontvægt-hierarki nedenfor */

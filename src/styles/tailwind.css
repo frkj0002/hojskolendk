@@ -36,7 +36,7 @@
   p {
     @apply font-sans;
     /* @apply text-paragraph; */
-    font-size: clamp(1rem, 3vw, 1.5625rem);
+    font-size: clamp(1rem, 3vw, 1.3125rem);
     @apply font-regular;
     @apply text-colors-blue-950;
   }
