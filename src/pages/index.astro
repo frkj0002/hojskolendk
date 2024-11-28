@@ -12,6 +12,7 @@ import polarid_sektion1_mobil from "../assets/images/polarid_sektion1_mobil.png"
 import polarid_sektion2_mobil from "../assets/images/polarid_sektion2_mobil.png";
 import surfholdet from "../assets/images/surfholdet.png";
 import Accordion from "../components/Accordion.astro";
+import Form from "../components/Form.astro";
 ---
 
 <MainLayout title="höjskolendk">
@@ -20,9 +21,9 @@ import Accordion from "../components/Accordion.astro";
       <h1 class="">HÖJSKOLENDK</h1>
     </div>
     <div class="flex flex-row justify-center items-center h-full z-0">
-      <video src="public/hojskolendk_hero.mp4" class="rounded-lg shadow-lg w-full max-w-lg" autoplay muted loop></video>
-      <video src="public/hojskolendk_hero.mp4" class="rounded-lg shadow-lg w-full max-w-lg" autoplay muted loop></video>
-      <video src="public/hojskolendk_hero.mp4" class="rounded-lg shadow-lg w-full max-w-lg" autoplay muted loop></video>
+      <video src="/hojskolendk_hero.mp4" class="rounded-lg shadow-lg w-full max-w-lg" autoplay muted loop></video>
+      <video src="/hojskolendk_hero.mp4" class="rounded-lg shadow-lg w-full max-w-lg" autoplay muted loop></video>
+      <video src="/hojskolendk_hero.mp4" class="rounded-lg shadow-lg w-full max-w-lg" autoplay muted loop></video>
     </div>
   </article>
 
@@ -32,18 +33,21 @@ import Accordion from "../components/Accordion.astro";
     <p class="w-[296px] md:w-[826px] py-sm">HÖJSKOLENDK er en dansk højskole for unge i alderen ca. 18-30 år. Vi brænder for oplevelser, fællesskab og mødet med nye mennesker og kulturer; derfor laver vi eventyrlige højskoleophold i udlandet. HÖJSKOLENDK er noget for dig, hvis du vil på højskole i udlandet og er vild med højskolefællesskab, vil med på et fantastisk rejseeventyr, glæder dig til at lære om fremmede kulturer, vil rejse med rygsæk, drømmer om en fed grupperejse med andre skønne unge, vil opleve et stærkt sammenhold og ønsker inspirerende og meningsfuld undervisning. Du er sikker på en tryg rejseoplevelse da vi er medlem af Rejsegarantifonden. Vi glæder os til at lære dig at kende!</p>
   </section>
 
-<!-- Cards sektion -->
+  <!-- Cards sektion -->
   <div class="flex flex-col items-center py-m">
-<h3 class="text-colors-orange-500">eventyrlige ophold</h3>
-</div>
-  <section class="grid md:grid-cols-3 gap-m mx-lg md:pb-6xl">
+    <h3 class="text-colors-orange-500">eventyrlige ophold</h3>
+  </div>
+  <section class="grid md:grid-cols-3 gap-m mx-lg md:pb-lg">
     <Card cardimage="public/IMG_8086.jpg" varighed=" 3 måneder" destination="Caribien, Hawaii & Mexico" afrejse=" 20. oktober 2024" pris=" 67.900 kr." />
     <Card cardimage="public/IMG_8087.jpg" varighed=" 3 måneder" destination="Australien, NZ, Bali, Gili Islands" afrejse=" 9. januar 2025" pris=" 58.900 kr." />
     <Card cardimage="public/IMG_8088.jpg" varighed=" 3 måneder" destination="Costa Rica, Mexico & Columbia" afrejse=" 9. januar 2025" pris=" 58.900 kr." />
   </section>
+  <div class="flex flex-col items-center md:pb-6xl">
+    <Button variant="primary" size="small">Se alle ophold</Button>
+  </div>
 
   <!-- Højskoleophold i udlandet -->
-  <section class="flex flex-col items-center px-lg">
+  <section class="flex flex-col items-center px-lg md:pb-6xl">
     <h2>Højskoleophold i udlandet</h2>
     <p class="w-[296px] md:w-[826px] py-sm">Tag på højskole i udlandet med HÖJSKOLENDK og oplev en unik rejse, der kombinerer fællesskab, dannelse og eventyr. Brug dit sabbatår på frivilligt arbejde, vilde naturoplevelser, sprogindlæring og personlig udvikling, der styrker din selvtillid og selvindsigt. Inspirerende undervisning forener læring og leg og hjælper dig med at udforske dine drømme og mål for fremtiden. Vores elever beskriver opholdet som "eventyrlige dannelsesrejser med noget på hjerte." Med passionerede danske undervisere, trygge rammer og en stærk gruppe oplever du vilde kulturer, adventure og en rejse, der gør dig stærkere som menneske. Find dit livs eventyr med HÖJSKOLENDK - vi glæder os til at byde dig velkommen!</p>
     <Image src={polarid_sektion1_web} alt="logo" class="hidden md:block w-full" />
@@ -51,26 +55,35 @@ import Accordion from "../components/Accordion.astro";
   </section>
 
   <!-- Anmeldelser sektion -->
-  <section class="p-lg">
+  <section class="px-lg md:pb-6xl">
+    <div class="flex flex-col items-center pb-m">
+      <h2>Det siger tidligere elever</h2>
+    </div>
     <div class="grid md:grid-cols-2 gap-m py-m">
-    <Anmeldelse citat="På mit højskoleophold blev jeg mødt af uforglemmelige oplevelser, spændende undervisning og nye venskaber." elevimage="public/emma2.png" elevimagealt="billede af Emma" elevnavn="Emma"/>
-    <Anmeldelse citat="De mest imødekommende og omsorgsfulde lære / undervisere / rejseledere, man kunne ønske sig." elevimage="public/william.png" elevimagealt="billede af William" elevnavn="William"/>
+      <Anmeldelse citat="På mit højskoleophold blev jeg mødt af uforglemmelige oplevelser, spændende undervisning og nye venskaber." elevimage="/emma2.png" elevimagealt="billede af Emma" elevnavn="Emma" />
+      <Anmeldelse citat="De mest imødekommende og omsorgsfulde lære / undervisere / rejseledere, man kunne ønske sig." elevimage="/william.png" elevimagealt="billede af William" elevnavn="William" />
     </div>
     <div class="grid md:grid-cols-3 gap-m">
-    <Anmeldelse citat="Det, der gjorde rejsen helt speciel var den fantastiske højskolestemning, som var der hele turen igennem." elevimage="public/mikkel.png" elevimagealt="billede af mikkel" elevnavn="Mikkel"/>
-    <Anmeldelse citat="HöjskolenDK har givet mig så meget mere end blot en rejse; de har givet mig livslange venskaber og en dybere forståelse for verden." elevimage="public/kamilla.png" elevimagealt="billede af Kamilla" elevnavn="Kamilla"/>
-    <Anmeldelse citat="Man har altid sine rejseledere at læne sig op ad, hvilket er skønt når man ikke har særlig meget erfaring med verden uden for Danmark." elevimage="public/signe.png" elevimagealt="billede af Signe" elevnavn="Signe"/>
+      <Anmeldelse citat="Det, der gjorde rejsen helt speciel var den fantastiske højskolestemning, som var der hele turen igennem." elevimage="/mikkel.png" elevimagealt="billede af mikkel" elevnavn="Mikkel" />
+      <Anmeldelse citat="HöjskolenDK har givet mig så meget mere end blot en rejse; de har givet mig livslange venskaber og en dybere forståelse for verden." elevimage="/kamilla.png" elevimagealt="billede af Kamilla" elevnavn="Kamilla" />
+      <Anmeldelse citat="Man har altid sine rejseledere at læne sig op ad, hvilket er skønt når man ikke har særlig meget erfaring med verden uden for Danmark." elevimage="/signe.png" elevimagealt="billede af Signe" elevnavn="Signe" />
     </div>
   </section>
 
   <!-- Infomøde sektion -->
-  <section class="py-lg">
-    <h2 class="flex flex-col items-center">Infomøder</h2>
-    <article>
-      <ul>
-        <li></li>
-        <li></li>
-        <li></li>
+  <h2 class="flex flex-col items-center">Infomøder</h2>
+  <section class="px-lg grid grid-cols-2">
+    <article class="">
+      <p>
+        Mangler du det sidste skub til at tage på et af vores højskoleophold, så tilmeld dig et af vores hyggelige infomøder. Her får du svar på alle dine spørgsmål, og du har mulighed for at snakke med tidligere elever og rejseledere i vores 'Rejsefeber Café'.
+        <br />Vi fortæller blandt andet om:
+      </p>
+      <ul class="list-disc px-m">
+        <li>Hvem er vi?</li>
+        <li>Alle de fede oplevelser der venter</li>
+        <li>En ”almindelig” dag på højskole i udlandet</li>
+        <li>Den levende og aktive måde vi underviser på (glem kedelige klasseværelser)</li>
+        <li>Økonomi, lommepenge, pakkeliste, friuger, afrejsemødet, etc.</li>
       </ul>
       <h4>Vi glæder os til at se dig!</h4>
     </article>
@@ -87,7 +100,7 @@ import Accordion from "../components/Accordion.astro";
     </article>
     <article class="md:my-auto flex flex-col">
       <h2>Vælg dit eventyr</h2>
-      <p class="w-[296px] md:w-[620px] pb-m">Hvis du er afklaret og klar på højskoleeventyr, er det bare med at tilmelde dig. Der bliver nemlig udsolgt på langt de fleste af vores ophold.</p>
+      <p class="w-[296px] md:w-[620px] pb-m">Hvis du er afklaret og klar på højskoleeventyr, er det bare med at tilmelde dig. Der bliver nemlig udsolgt på langt de fleste af vores ophold.</p>
       <Button variant="primary" size="large">Tilmeld ophold</Button>
     </article>
   </section>
@@ -99,7 +112,7 @@ import Accordion from "../components/Accordion.astro";
   </section>
 
   <!-- Accordions -->
-   <Accordion></Accordion>
+  <Accordion />
 
   <!-- Billed sektion -->
   <section class="flex flex-col items-center pb-lg">
