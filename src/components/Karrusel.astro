@@ -1,5 +1,6 @@
 ---
 import Anmeldelse from './Anmeldelse.astro';
+import Card from './Card.astro';
 
 // Liste over data til hver slide
 const slidesData = [
@@ -72,8 +73,14 @@ const slidesData = [
     </div>
 </div> -->
 
+
+<!-- nye -->
 <div x-data="{ 
-    slides: ['https://via.placeholder.com/800x400', 'https://via.placeholder.com/800x400?text=Slide+2', 'https://via.placeholder.com/800x400?text=Slide+3'], 
+    slides: [
+        { cardProps: { cardimage: 'public/emma2.png', varighed: '3 måneder', destination: 'Caribien, Hawaii & Mexico', afrejse: '20. oktober 2024', pris: '67.900 kr.' } },
+        { cardProps: { cardimage: 'public/IMG_8087.jpg', varighed: '3 måneder', destination: 'Australien, NZ, Bali, Gili Islands', afrejse: '9. januar 2025', pris: '58.900 kr.' } },
+        { cardProps: { cardimage: 'public/IMG_8088.jpg', varighed: '3 måneder', destination: 'Costa Rica, Mexico & Columbia', afrejse: '9. januar 2025', pris: '58.900 kr.' } }
+    ], 
     currentIndex: 0,
     nextSlide() { this.currentIndex = (this.currentIndex + 1) % this.slides.length },
     prevSlide() { this.currentIndex = (this.currentIndex - 1 + this.slides.length) % this.slides.length },
@@ -86,8 +93,16 @@ const slidesData = [
         class="w-full flex-shrink-0 transition-transform duration-500"
         :style="`transform: translateX(-${currentIndex * 100}%)`"
       >
-        <img :src="slide" alt="Slide" class="w-full h-full object-cover">
+        <!-- Render Card med Astro-komponent -->
+        <Card 
+          :cardimage="slide.cardProps.cardimage"
+          :varighed="slide.cardProps.varighed"
+          :destination="slide.cardProps.destination"
+          :afrejse="slide.cardProps.afrejse"
+          :pris="slide.cardProps.pris"
+        />
       </div>
+      
     </template>
   </div>
 
@@ -116,6 +131,9 @@ const slidesData = [
     </template>
   </div>
 </div>
+
+
+
 
 
 
